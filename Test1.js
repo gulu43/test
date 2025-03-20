@@ -10,10 +10,11 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
     console.log(data);
     // data
     data.forEach(ele => {
-    mainContVal.innerHTML='';
+    // mainContVal.innerHTML='';
     mainContVal.innerHTML +=`
+    
     <tr class="row">
-        
+
         <td class="first_col">
             <div class="img_div">
                 <img class="img" src="${ele.image}" alt="img">
@@ -51,8 +52,8 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
             <div class="mkt_first_part">Mkt Cap : </div>
             <div class="mkt_values">${ele.total_supply}</div>
         </td>
-    </tr><br/>
-
+    </tr>
+    <br/>
     `
         
     });
