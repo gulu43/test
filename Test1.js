@@ -243,3 +243,14 @@ per_btn_var.addEventListener('click',()=>{
 
     })
 })
+
+
+// just for resvisiion and in jest it had 5marks so..
+
+// async function api() {
+    setTimeout( async() =>{
+        let api = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false');
+    let json_data = await api.json();
+    console.log(json_data);
+    },3000);
+// }
